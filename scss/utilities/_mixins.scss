@@ -1,0 +1,26 @@
+//////////// mediaqueries ////////////////
+@mixin mq($size) {
+    @if $size == small{
+        @media #{$small-only}{ @content; }
+    }
+    @else if $size == medium{
+        @media #{$medium-only}{ @content; }
+    }
+    @else if $size == large{
+        @media #{$large-only}{ @content; }
+    }
+    @else if $size == x-large{
+        @media #{$x-large}{ @content; }
+    }
+
+    //and more
+    @else if $size == smallAndBigger{
+        @media #{$small-more}{ @content; }
+    }
+    @else if $size == mediumAndBigger{
+        @media #{$medium-more}{ @content; }
+    }
+    @else if $size == largeAndBigger{
+        @media #{$large-more}{ @content; }
+    }
+}
