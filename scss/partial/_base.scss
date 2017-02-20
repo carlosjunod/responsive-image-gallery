@@ -36,6 +36,15 @@ footer{
     }
 }
 
+/*! ------------------------------- 3d --------------------- */
+.animate{
+    transform: rotateX(0) rotateY(180deg);
+}
+
+.normal{
+    transform: rotateX(0) rotateY(360deg);
+}
+
 #gallery{
 
     @include mq(smallIntermedium){
@@ -52,6 +61,7 @@ footer{
         display: flex;
         flex-direction: column;
         width: 100%;
+        perspective: 1000;
 
         @include mq(smallAndBigger){
             flex-direction: row;
@@ -64,6 +74,7 @@ footer{
             flex-direction: column;
             margin-bottom: 1rem;
             flex-basis: 100%;
+            transition: 300ms all ease-out;
 
 
             @include mq(smallIntermedium){
