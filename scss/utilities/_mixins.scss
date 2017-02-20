@@ -23,4 +23,15 @@
     @else if $size == largeAndBigger{
         @media #{$large-more}{ @content; }
     }
+
+    // extra
+    @else if $size == smallIntermedium{
+        @media #{$small-large}{ @content; }
+    }
+    @else if $size == mediumIntermedium{
+        @media #{$medium-large}{ @content; }
+    }
+    @else if $size == largeIntermedium{
+        @media #{$large-large}{ @content; }
+    }
 }
